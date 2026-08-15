@@ -1,0 +1,113 @@
+/* Custom CSS Utilities for RealEstate AI */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-input {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+  color: #ffffff;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.gradient-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+}
+.gradient-btn:active {
+  transform: translateY(0);
+}
+
+/* Chat bubble styling */
+.user-bubble {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: #ffffff;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.assistant-bubble {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* Markdown styling in Assistant message */
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-content h1 { font-size: 1.25rem; }
+.markdown-content h2 { font-size: 1.15rem; }
+.markdown-content h3 { font-size: 1.05rem; }
+
+.markdown-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-content ul, .markdown-content ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-content strong {
+  color: #38bdf8;
+}
+
+/* Pulse dots for typing indicator */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.dot-1 { animation: pulse-dot 1.2s infinite 0s; }
+.dot-2 { animation: pulse-dot 1.2s infinite 0.2s; }
+.dot-3 { animation: pulse-dot 1.2s infinite 0.4s; }
